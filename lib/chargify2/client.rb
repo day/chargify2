@@ -49,5 +49,9 @@ module Chargify2
     def transactions
       Chargify2::TransactionResource.new(self)
     end
+    
+    def subscriptions
+      Chargify2::SubscriptionResource.new(self)
+    end
   end
 end
