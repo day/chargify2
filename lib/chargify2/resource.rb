@@ -90,6 +90,8 @@ module Chargify2
     end
 
     def self.list(query = {})
+      uri = interpolate_uri(query)
+      
       response = self.get(uri, :query => query.empty? ? nil : query)
 
       if response.code.to_s =~ /^2/ && resources = response.parsed_response.delete(self.plural_name)
