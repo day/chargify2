@@ -1,4 +1,5 @@
 require 'chargify2/client'
+require 'forwardable'
 
 module Chargify2
   # Resource orchestrates the connection from the Client to the Chargify API Resources, available
