@@ -53,8 +53,8 @@ module Chargify2
       (response.result.errors || []).map! {|e| OpenCascade.new(e.deep_symbolize_keys)}
     end
 
-    class Request < OpenCascade; end
-    class Response < OpenCascade; end
+    class Request < Hashery::OpenCascade; end
+    class Response < Hashery::OpenCascade; end
   end
 end
 
